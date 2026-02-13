@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+img {
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #e94560;
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+button {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#greeting-btn {
+    background-color: #e94560;
+}
+
+#greeting-btn:hover {
+    background-color: #c73652;
+}
+
+#fact-btn {
+    background-color: #0f3460;
+}
+
+#fact-btn:hover {
+    background-color: #0a2647;
+}
+
+#joke-btn {
+    background-color: #16813d;
+}
+
+#joke-btn:hover {
+    background-color: #116b32;
+}
+
+#explain-btn {
+    background-color: #f0c000;
+    color: #fff;
+}
+
+#explain-btn:hover {
+    background-color: #d4a900;
+}
+
+#surprise-btn {
+    background-color: #e91e90;
+}
+
+#surprise-btn:hover {
+    background-color: #c4187a;
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+@keyframes confetti-fall {
+    0% {
+        top: -10px;
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 100vh;
+        opacity: 0;
+        transform: rotate(720deg);
+    }
+}

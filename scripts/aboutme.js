@@ -163,3 +163,45 @@ function sleepKitty() {
 
 document.getElementById("play-btn").addEventListener("click", playWithYarn);
 document.getElementById("sleep-btn").addEventListener("click", sleepKitty);
+
+// --- Mad Libs ---
+var storyTemplates = [
+    function (adj, noun, verb, animal, place) {
+        return "One " + adj + " morning, a " + animal + " found a magical " + noun + " in " + place + ". It " + verb + " around wildly until the " + noun + " started glowing. The " + animal + " became the most " + adj + " hero " + place + " had ever seen!";
+    },
+    function (adj, noun, verb, animal, place) {
+        return "A " + adj + " " + animal + " " + verb + " all the way to " + place + " just to find the perfect " + noun + ". When it got there, the " + noun + " " + verb + " right back! The " + adj + " " + animal + " couldn't believe its eyes!";
+    },
+    function (adj, noun, verb, animal, place) {
+        return "In " + place + ", there lived a " + adj + " " + animal + " who loved to collect " + noun + "s. One day it " + verb + " so hard that all the " + noun + "s flew into the sky! Now everyone in " + place + " calls it the " + adj + " " + noun + " storm!";
+    }
+];
+
+document.getElementById("madlibs-btn").addEventListener("click", function () {
+    var adjective = document.getElementById("ml-adjective").value.trim();
+    var noun = document.getElementById("ml-noun").value.trim();
+    var verb = document.getElementById("ml-verb").value.trim();
+    var animal = document.getElementById("ml-animal").value.trim();
+    var place = document.getElementById("ml-place").value.trim();
+
+    if (!adjective || !noun || !verb || !animal || !place) {
+        alert("Please fill in all the words first!");
+        return;
+    }
+
+    // Pick a random story template
+    var randomIndex = Math.floor(Math.random() * storyTemplates.length);
+    var story = storyTemplates[randomIndex](adjective, noun, verb, animal, place);
+
+    // Highlight the user's words in the story
+    var words = [adjective, noun, animal, place, verb];
+    var storyHTML = story;
+    for (var i = 0; i < words.length; i++) {
+        var regex = new RegExp(words[i], "gi");
+        storyHTML = storyHTML.replace(regex, '<span class="highlight">' + words[i] + '</span>');
+    }
+
+    var storyDiv = document.getElementById("madlibs-story");
+    storyDiv.innerHTML = storyHTML;
+    storyDiv.classList.add("visible");
+});

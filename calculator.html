@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Calculator</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="calc-page">
+    <h1>🧮 Fun Calculator 🎉</h1>
+
+    <div class="calc-container">
+        <div class="calc-display" id="calc-display">0</div>
+        <div class="calc-grid">
+            <button class="calc-btn calc-clear" id="calc-clear">🧹 Clear</button>
+            <button class="calc-btn calc-op" data-op="%">🔢 %</button>
+            <button class="calc-btn calc-op" data-op="/">➗</button>
+
+            <button class="calc-btn calc-num" data-num="7">7</button>
+            <button class="calc-btn calc-num" data-num="8">8</button>
+            <button class="calc-btn calc-num" data-num="9">9</button>
+            <button class="calc-btn calc-op" data-op="*">✖️</button>
+
+            <button class="calc-btn calc-num" data-num="4">4</button>
+            <button class="calc-btn calc-num" data-num="5">5</button>
+            <button class="calc-btn calc-num" data-num="6">6</button>
+            <button class="calc-btn calc-op" data-op="-">➖</button>
+
+            <button class="calc-btn calc-num" data-num="1">1</button>
+            <button class="calc-btn calc-num" data-num="2">2</button>
+            <button class="calc-btn calc-num" data-num="3">3</button>
+            <button class="calc-btn calc-op" data-op="+">➕</button>
+
+            <button class="calc-btn calc-num calc-zero" data-num="0">0</button>
+            <button class="calc-btn calc-num" data-num=".">.</button>
+            <button class="calc-btn calc-equals" id="calc-equals">🟰</button>
+        </div>
+    </div>
+
+    <div class="calc-reaction" id="calc-reaction"></div>
+
+    <a href="index.html" class="back-link">Back to Home</a>
+
+    <script src="scripts/calculator.js"></script>
+</body>
+</html>

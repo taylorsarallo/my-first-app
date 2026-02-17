@@ -112,3 +112,25 @@ document.getElementById("yes-btn").addEventListener("click", function () {
 document.getElementById("no-btn").addEventListener("click", function () {
     spawnEmojis("😢");
 });
+
+// --- Kitty Functions ---
+function playWithYarn() {
+    var kitty = document.getElementById("kitty-display");
+    var status = document.getElementById("kitty-status");
+    kitty.textContent = "🐱🧶";
+    kitty.classList.remove("sleeping");
+    kitty.classList.add("playing");
+    status.textContent = "Kitty is playing with yarn! 🎉";
+}
+
+function sleepKitty() {
+    var kitty = document.getElementById("kitty-display");
+    var status = document.getElementById("kitty-status");
+    kitty.textContent = "😺💤";
+    kitty.classList.remove("playing");
+    kitty.classList.add("sleeping");
+    status.textContent = "Shhh... kitty is sleeping... 🌙";
+}
+
+document.getElementById("play-btn").addEventListener("click", playWithYarn);
+document.getElementById("sleep-btn").addEventListener("click", sleepKitty);

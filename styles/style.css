@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     background-color: #1a1a2e;
     color: #e0e0e0;
+    padding: 2rem 1rem;
 }
 
 img {
@@ -130,7 +131,7 @@ p {
 }
 
 .about-page {
-    overflow: hidden;
+    overflow-x: hidden;
     gap: 1rem;
     transition: background-color 2s ease, color 2s ease;
 }
@@ -493,6 +494,88 @@ p {
         top: 105vh;
         opacity: 0;
     }
+}
+
+/* --- Kitty Section --- */
+.kitty-box {
+    margin-top: 2rem;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(135deg, #2d1b4e, #1a1a2e);
+    border-radius: 16px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 6px 20px rgba(45, 27, 78, 0.4);
+}
+
+.kitty-display {
+    font-size: 5rem;
+    line-height: 1;
+    transition: transform 0.3s;
+}
+
+.kitty-display.playing {
+    animation: kitty-play 0.4s ease infinite;
+}
+
+.kitty-display.sleeping {
+    animation: kitty-breathe 2s ease-in-out infinite;
+}
+
+@keyframes kitty-play {
+    0% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-15px) rotate(-10deg); }
+    50% { transform: translateX(15px) rotate(10deg); }
+    75% { transform: translateX(-10px) rotate(-5deg); }
+    100% { transform: translateX(0) rotate(0deg); }
+}
+
+@keyframes kitty-breathe {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.kitty-status {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.kitty-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.kitty-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kitty-btn:hover {
+    transform: scale(1.08);
+}
+
+.kitty-play {
+    background-color: #e91e90;
+    box-shadow: 0 4px 15px rgba(233, 30, 144, 0.4);
+}
+
+.kitty-play:hover {
+    background-color: #c4187a;
+}
+
+.kitty-sleep {
+    background-color: #6c3fa0;
+    box-shadow: 0 4px 15px rgba(108, 63, 160, 0.4);
+}
+
+.kitty-sleep:hover {
+    background-color: #5a3488;
 }
 
 @keyframes confetti-fall {

@@ -133,7 +133,8 @@ p {
 .about-page {
     overflow-x: hidden;
     gap: 1rem;
-    transition: background-color 2s ease, color 2s ease;
+    color: #ffffff;
+    transition: background-color 2s ease;
 }
 
 /* --- Weather Backgrounds --- */
@@ -151,17 +152,14 @@ p {
 
 .weather-sunny {
     background-color: #f59e0b;
-    color: #1a1a2e;
 }
 
 .weather-rainy {
     background-color: #1e3a5f;
-    color: #e0e0e0;
 }
 
 .weather-snowy {
     background-color: #d1d5db;
-    color: #1a1a2e;
 }
 
 .weather-particle {
@@ -272,7 +270,6 @@ p {
 .card-food {
     background: linear-gradient(135deg, #f0c000, #d4a900);
     box-shadow: 0 6px 20px rgba(240, 192, 0, 0.3);
-    color: #1a1a2e;
 }
 
 .card-hobby {
@@ -494,6 +491,43 @@ p {
         top: 105vh;
         opacity: 0;
     }
+}
+
+/* --- Cat Parade --- */
+.cat-parade-box {
+    margin-top: 2rem;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    border-radius: 16px;
+    text-align: center;
+    z-index: 1;
+    box-shadow: 0 6px 20px rgba(22, 33, 62, 0.4);
+}
+
+.cat-parade-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.cat-parade {
+    font-size: 4rem;
+    margin-top: 0.5rem;
+    transition: transform 0.3s;
+    animation: cat-bounce 0.6s ease infinite;
+}
+
+@keyframes cat-bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+.cat-parade-name {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /* --- Kitty Section --- */

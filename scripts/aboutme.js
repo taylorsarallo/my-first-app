@@ -113,6 +113,35 @@ document.getElementById("no-btn").addEventListener("click", function () {
     spawnEmojis("😢");
 });
 
+// --- Cat Parade Array ---
+var coloredCats = [
+    { emoji: "🐱", name: "Orange Tabby" },
+    { emoji: "🐈", name: "Walking Cat" },
+    { emoji: "🐈‍⬛", name: "Black Cat" },
+    { emoji: "😺", name: "Happy Cat" },
+    { emoji: "😸", name: "Grinning Cat" },
+    { emoji: "😻", name: "Love Cat" },
+    { emoji: "😼", name: "Smirking Cat" },
+    { emoji: "🙀", name: "Shocked Cat" },
+    { emoji: "😿", name: "Sad Cat" },
+    { emoji: "😾", name: "Grumpy Cat" }
+];
+var catParadeIndex = 0;
+
+function showNextCat() {
+    var paradeDisplay = document.getElementById("cat-parade");
+    var paradeName = document.getElementById("cat-parade-name");
+    var cat = coloredCats[catParadeIndex];
+
+    paradeDisplay.textContent = cat.emoji;
+    paradeName.textContent = cat.name;
+
+    catParadeIndex = (catParadeIndex + 1) % coloredCats.length;
+}
+
+showNextCat();
+setInterval(showNextCat, 1500);
+
 // --- Kitty Functions ---
 function playWithYarn() {
     var kitty = document.getElementById("kitty-display");

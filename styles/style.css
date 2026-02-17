@@ -132,6 +132,79 @@ p {
 .about-page {
     overflow: hidden;
     gap: 1rem;
+    transition: background-color 2s ease, color 2s ease;
+}
+
+/* --- Weather Backgrounds --- */
+.weather-label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.4rem 0.8rem;
+    border-radius: 12px;
+    transition: opacity 0.5s;
+}
+
+.weather-sunny {
+    background-color: #f59e0b;
+    color: #1a1a2e;
+}
+
+.weather-rainy {
+    background-color: #1e3a5f;
+    color: #e0e0e0;
+}
+
+.weather-snowy {
+    background-color: #d1d5db;
+    color: #1a1a2e;
+}
+
+.weather-particle {
+    position: fixed;
+    top: -20px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.raindrop {
+    width: 2px;
+    background: rgba(150, 200, 255, 0.6);
+    animation: rain-fall linear infinite both;
+}
+
+@keyframes rain-fall {
+    0% { top: -20px; }
+    100% { top: 105vh; }
+}
+
+.snowflake {
+    color: white;
+    font-size: 1.2rem;
+    animation: snow-fall linear infinite both;
+}
+
+@keyframes snow-fall {
+    0% {
+        top: -20px;
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(15px);
+    }
+    50% {
+        transform: translateX(-10px);
+    }
+    75% {
+        transform: translateX(12px);
+    }
+    100% {
+        top: 105vh;
+        transform: translateX(0px);
+    }
 }
 
 /* --- About Me Cards --- */

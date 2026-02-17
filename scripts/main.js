@@ -29,6 +29,19 @@ document.getElementById("surprise-btn").addEventListener("click", function () {
     }
 });
 
+document.getElementById("cat-btn").addEventListener("click", function () {
+    var catImg = document.getElementById("cat-img");
+    if (catImg.classList.contains("cat-hidden")) {
+        catImg.classList.remove("cat-hidden");
+        catImg.classList.add("cat-visible");
+        this.textContent = "Hide Cat";
+    } else {
+        catImg.classList.remove("cat-visible");
+        catImg.classList.add("cat-hidden");
+        this.textContent = "Show Cat";
+    }
+});
+
 document.getElementById("explain-btn").addEventListener("click", function () {
     alert(
         "How this JavaScript code works:\n\n" +

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎀 Kick Counter</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body class="kick-page">
+
+    <div class="kick-bows kick-bows-top">
+        <img src="images/bow2.png" alt="bow" class="bow-img bow-img-large">
+    </div>
+
+    <h1>Kick Counter</h1>
+
+    <p id="pregnancy-week" class="pregnancy-week"></p>
+
+    <div class="kick-hero">
+        <button id="kick-btn"><img src="images/footprint.png" alt="footprint" class="footprint-btn-img"> kick <img src="images/footprint.png" alt="footprint" class="footprint-btn-img footprint-flip"></button>
+        <p id="kick-today-count">Today: 0 kicks</p>
+        <p id="kick-reaction" class="kick-reaction"></p>
+        <button id="undo-btn" class="kick-undo-btn">↩ Undo Last Kick</button>
+    </div>
+
+    <div class="kick-view-toggle">
+        <button class="kick-view-btn active" data-view="day">Day</button>
+        <button class="kick-view-btn" data-view="week">Week</button>
+        <button class="kick-view-btn" data-view="month">Month</button>
+    </div>
+
+    <div id="view-day" class="kick-view">
+        <div class="kick-day-header">
+            <h2><img src="images/bow2.png" alt="bow" class="bow-img bow-inline bow-sm"> Today's Kicks</h2>
+            <button id="clear-day-btn" class="kick-clear-btn">🗑️ Clear Day</button>
+        </div>
+        <p id="no-kicks-msg">No kicks recorded yet — hit the button!</p>
+        <ul id="kick-log"></ul>
+    </div>
+
+    <div id="view-week" class="kick-view kick-hidden">
+        <h2><img src="images/bow2.png" alt="bow" class="bow-img bow-inline bow-sm"> This Week</h2>
+        <div id="week-grid"></div>
+    </div>
+
+    <div id="view-month" class="kick-view kick-hidden">
+        <h2 id="month-title">🎀 Month</h2>
+        <div class="month-day-labels">
+            <span>Sun</span><span>Mon</span><span>Tue</span>
+            <span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+        </div>
+        <div id="month-grid"></div>
+    </div>
+
+    <div class="kick-bows kick-bows-bottom">
+        <img src="images/bow2.png" alt="bow" class="bow-img">
+        <img src="images/bow2.png" alt="bow" class="bow-img">
+        <img src="images/bow2.png" alt="bow" class="bow-img">
+    </div>
+
+    <a href="index.html" class="back-link">Back to Home</a>
+
+    <script src="scripts/kickcounter.js"></script>
+</body>
+</html>

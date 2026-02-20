@@ -921,8 +921,8 @@ body.kick-page h2 {
     vertical-align: middle;
     position: relative;
     top: 8px;
-    opacity: 0.75;
-    filter: brightness(10);
+    opacity: 0.6;
+    filter: brightness(5) saturate(0);
 }
 
 .footprint-flip {
@@ -966,7 +966,7 @@ body.kick-page h2 {
     font-size: 2.2rem;
     font-weight: 400;
     border: 1px solid rgba(255,255,255,0.6);
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 1rem 2.5rem;
     cursor: pointer;
     display: inline-flex;

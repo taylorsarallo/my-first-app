@@ -865,17 +865,24 @@ body.kick-page h1 {
     font-size: 8rem;
     text-shadow: none;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     line-height: 1;
 }
 
 body.kick-page h2 {
     font-family: 'Parisienne', cursive;
     color: #D186A9;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     letter-spacing: 0.03em;
+}
+
+.kick-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 }
 
 .kick-bows {
@@ -932,7 +939,13 @@ body.kick-page h2 {
 }
 
 .kick-bows-bottom {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+}
+
+.bow-bottom-single {
+    width: 80px;
+    height: 80px;
+    opacity: 0.7;
 }
 
 /* Hero section */
@@ -940,8 +953,8 @@ body.kick-page h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
-    margin: 1.5rem 0;
+    gap: 0.5rem;
+    margin: 1rem 0;
 }
 
 #kick-btn {
@@ -1089,10 +1102,11 @@ body.kick-page h2 {
 }
 
 #no-kicks-msg {
-    color: #c2185b;
+    color: #C87FA3;
     font-style: italic;
     text-align: center;
-    opacity: 0.75;
+    opacity: 0.7;
+    font-size: 0.9rem;
 }
 
 @keyframes kick-item-pop {
@@ -1136,8 +1150,8 @@ body.kick-page h2 {
 }
 
 .week-day-row.week-today .week-day-label {
-    color: #e91e8c;
-    font-weight: bold;
+    color: #D186A9;
+    font-weight: 600;
 }
 
 .week-day-label {
@@ -1185,10 +1199,12 @@ body.kick-page h2 {
 
 .month-day-labels span {
     text-align: center;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #ad1457;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #C87FA3;
     padding: 2px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
 #month-grid {
@@ -1252,21 +1268,24 @@ body.kick-page h2 {
 
 /* Undo button */
 .kick-undo-btn {
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(240, 173, 204, 0.5);
-    border-radius: 20px;
+    background: transparent;
+    border: none;
     color: #C87FA3;
-    font-size: 0.82rem;
-    padding: 0.3rem 0.9rem;
+    font-size: 0.78rem;
+    padding: 0.2rem 0.5rem;
     cursor: pointer;
-    transition: background 0.2s, color 0.2s, border-color 0.2s;
-    letter-spacing: 0.02em;
+    transition: color 0.2s, opacity 0.2s;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(200, 127, 163, 0.3);
 }
 
 .kick-undo-btn:hover {
-    background: rgba(240, 173, 204, 0.25);
     color: #B86E91;
-    border-color: #D186A9;
+    opacity: 1;
 }
 
 /* Day view header row */

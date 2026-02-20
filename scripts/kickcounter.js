@@ -181,7 +181,7 @@ function renderMonthView() {
 
     var monthNames = ["January","February","March","April","May","June",
                       "July","August","September","October","November","December"];
-    document.getElementById("month-title").innerHTML = "<img src='images/bow2.png' alt='bow' class='bow-img bow-inline bow-sm'> " + monthNames[month] + " " + year;
+    document.getElementById("month-title").textContent = monthNames[month] + " " + year;
 
     var grid = document.getElementById("month-grid");
     grid.innerHTML = "";

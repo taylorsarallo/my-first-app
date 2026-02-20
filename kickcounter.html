@@ -17,15 +17,16 @@
         <img src="images/bow2.png" alt="bow" class="bow-img bow-img-large">
     </div>
 
-    <h1>Kick Counter</h1>
-
-    <p id="pregnancy-week" class="pregnancy-week"></p>
+    <div class="kick-header">
+        <h1>Kick Counter</h1>
+        <p id="pregnancy-week" class="pregnancy-week"></p>
+    </div>
 
     <div class="kick-hero">
         <button id="kick-btn"><img src="images/footprint.png" alt="footprint" class="footprint-btn-img"> kick <img src="images/footprint.png" alt="footprint" class="footprint-btn-img footprint-flip"></button>
         <p id="kick-today-count">Today: 0 kicks</p>
         <p id="kick-reaction" class="kick-reaction"></p>
-        <button id="undo-btn" class="kick-undo-btn">↩ Undo Last Kick</button>
+        <button id="undo-btn" class="kick-undo-btn">undo</button>
     </div>
 
     <div class="kick-view-toggle">
@@ -36,7 +37,7 @@
 
     <div id="view-day" class="kick-view">
         <div class="kick-day-header">
-            <h2><img src="images/bow2.png" alt="bow" class="bow-img bow-inline bow-sm"> Today's Kicks</h2>
+            <h2>Today's Kicks</h2>
             <button id="clear-day-btn" class="kick-clear-btn">Clear Day</button>
         </div>
         <p id="no-kicks-msg">No kicks recorded yet — hit the button!</p>
@@ -44,7 +45,7 @@
     </div>
 
     <div id="view-week" class="kick-view kick-hidden">
-        <h2><img src="images/bow2.png" alt="bow" class="bow-img bow-inline bow-sm"> This Week</h2>
+        <h2>This Week</h2>
         <div id="week-grid"></div>
     </div>
 
@@ -58,9 +59,7 @@
     </div>
 
     <div class="kick-bows kick-bows-bottom">
-        <img src="images/bow2.png" alt="bow" class="bow-img">
-        <img src="images/bow2.png" alt="bow" class="bow-img">
-        <img src="images/bow2.png" alt="bow" class="bow-img">
+        <img src="images/bow2.png" alt="bow" class="bow-img bow-bottom-single">
     </div>
 
 <script src="scripts/kickcounter.js"></script>

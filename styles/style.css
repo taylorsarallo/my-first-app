@@ -923,6 +923,7 @@ body.kick-page h2 {
     position: relative;
     top: 8px;
     opacity: 0.75;
+    filter: brightness(10);
 }
 
 .footprint-flip {

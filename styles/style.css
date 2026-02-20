@@ -896,7 +896,6 @@ body.kick-page h2 {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    filter: hue-rotate(345deg) saturate(0.8) brightness(1.1);
 }
 
 .bow-img-large {
